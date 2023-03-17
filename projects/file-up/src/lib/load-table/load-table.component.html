@@ -1,0 +1,24 @@
+
+<table>
+    <tr>
+        <!-- <th><a (click)="sortBy('name')">NAME{{sortIcon('name')}}</a></th> -->
+        <th (click)="sortBy('name')">Name</th>
+        <th>Size </th>
+        <th>type</th>
+        <th>last  Modified</th>
+        <th >content</th>
+
+       
+        
+    </tr>
+    <tr *ngFor="let data of listData">
+        <td>{{data.file.name}}</td>
+        <td>{{data.file.size}}</td>
+        <td>{{data.file.type}}</td>
+        <td>{{data.file.lastModified}}</td>
+        <td ><textarea rows="30" cols="60">{{data.content}}</textarea></td>
+        
+    </tr>
+    
+
+</table>
